@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praneeth Boinpally - Portfolio</title>
+    <!-- Embedding Spline viewer script -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.8.0/build/spline-viewer.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #fff; /* Set text color to white */
+            background-color: transparent; /* Set body background to transparent */
+        }
+
+        .spline-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .header {
+            background: rgba(0, 0, 0, 0.6); /* Background for header with transparency */
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative; /* Ensure it stacks above spline */
+            z-index: 1; /* Ensure it's above spline */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .nav {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav button {
+            background: #555;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav button:hover {
+            background: #777;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative; /* Ensure it stacks above spline */
+            z-index: 1; /* Ensure it's above spline */
+        }
+
+        .section {
+            display: none; /* Hide all sections by default */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+        }
+
+        .section.active {
+            display: block; /* Show active section */
+        }
+
+        .welcome {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            position: relative; /* Ensure it stacks above spline */
+            z-index: 1; /* Ensure it's above spline */
+        }
+
+        .welcome h2 {
+            font-size: 2.5em;
+            color: #fff; /* Text color white */
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.6); /* Background with transparency */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 1; /* Ensure it's above spline */
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Spline viewer element for background -->
+    <spline-viewer class="spline-container" url="https://prod.spline.design/nrIiz5JjElmaL04a/scene.splinecode"></spline-viewer>
+    
+    <!-- Content -->
+    <div class="header">
+        <h1>Praneeth Boinpally</h1>
+        <div class="nav">
+            <button onclick="showSection('welcome')">Home</button>
+            <button onclick="showSection('projects')">Projects</button>
+            <button onclick="showSection('skills')">Skills</button>
+            <button onclick="showSection('education')">Education</button>
+            <button onclick="showSection('certificates')">Certificates</button>
+            <button onclick="showSection('awards')">Awards</button>
+            <button onclick="showSection('contact')">Contact</button>
+            <button onclick="showSection('experience')">Experience</button>
+        </div>
+    </div>
+    <div class="container">
+        <div id="welcome" class="section active">
+            <div class="welcome">
+                <h2>Welcome to My Portfolio</h2>
+                <p>I'm Praneeth Boinpally, a dedicated Data Analyst driven by a passion for uncovering insights and driving data-driven solutions. Explore my projects, skills in data analysis, and achievements by navigating through the sections.</p>
+            </div>
+        </div>
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    <strong>Driver Drowsiness Detection Using Machine Learning</strong> | Python, OpenCV (Oct 2021 - Dec 2021)
+                    <p>Developed a system to monitor and analyze eye movements to detect driver drowsiness.</p>
+                </li>
+                <li>
+                    <strong>Network Intrusion Detection Using Machine Learning Techniques</strong> | XGBoost, scikit-learn (Feb 2022 - May 2022)
+                    <p>Created a system to identify and analyze network intrusions using machine learning.</p>
+                </li>
+                <li>
+                    <strong>Intelligent Proctor</strong> | Keras, TensorFlow (Jun 2022 - Aug 2022)
+                    <p>Built a system to monitor online examinations through data analysis of video feeds.</p>
+                </li>
+                <li>
+                    <strong>Server-side Business Logic and Android Client Mobile App</strong> (Jan 2023 - May 2023)
+                    <p>Designed a server-side application and Android client for efficient data management.</p>
+                </li>
+                <li>
+                    <strong>Laundry and Dryer Alarm using BeagleBone Black</strong> (Aug 2023 - Sep 2023)
+                    <p>Implemented an intelligent alarm system to monitor and analyze laundry cycles.</p>
+                </li>
+                <li>
+                    <strong>Claim Safe | Auto Insurance Premium Recommendation System</strong> (Jan 2024 - Mar 2024)
+                    <p>Developed a system to recommend auto insurance premiums based on comprehensive data analysis.</p>
+                </li>
+            </ul>
+        </div>
+        <div id="skills" class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li>Languages: Java, Python, Pyspark, SQL, CSS, JavaScript, HTML, R</li>
+                <li>Tools and Libraries: Pandas, NumPy, scikit-learn, XGBoost, TensorFlow, Tableau, Power BI, Microsoft Office Studio, Matplotlib, Seaborn, Jupyter Notebook, SQL Server Management Studio (SSMS), Microsoft Visio</li>
+                <li>Techniques: Data Analysis, Data Cleaning, Data Visualization, Statistical Analysis, Machine Learning, Predictive Modeling, Data Mining, ETL Processes, Database Management Systems (DBMS), Data Warehousing, A/B Testing, Hypothesis Testing, Regression Analysis, Time Series Analysis</li>
+                <li>Other Skills: Project Management, Problem-Solving, Critical Thinking, Communication Skills, Collaboration, Attention to Detail</li>
+                <li>Cloud: AWS (AWS S3, AWS Redshift, AWS RDS, AWS Glue, AWS Lambda, Kubernetes), Microsoft Azure (Azure Blob Storage, Azure SQL Database, Azure Data Factory, Azure Synapse Analytics, Azure Machine Learning)</li>
+            </ul>
+        </div>
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>George Mason University</strong> | Virginia, USA
+                    <p>M.S in Computer Science | Jan 2023 – May 2024</p>
+                    <p>GPA: 3.67/4</p>
+                </li>
+                <li>
+                    <strong>Sphoorthy Engineering College</strong> | Hyderabad, India
+                    <p>Bachelor of Technology, Computer Science | Aug 2018 - July 2022</p>
+                    <p>GPA: 7.48/10</p>
+                </li>
+            </ul>
+        </div>
+        <div id="experience" class="section">
+            <h2>Experience</h2>
+            <p>Data Analyst Intern</p>
+            <p>Trycryfly Service Limited, Hyderabad | October 2021 - August 2022</p>
+            <ul>
+                <li>Analyzed and interpreted complex data sets to provide actionable insights for business strategy.</li>
+                <li>Collaborated with cross-functional teams to optimize data collection processes and enhance data quality.</li>
+                <li>Utilized SQL and Python for data extraction, transformation, and analysis, resulting in a 95% improvement in data accuracy.</li>
+                <li>Prepared comprehensive reports and visualizations using tools like Power BI, effectively communicating findings to stakeholders.</li>
+                <li>Contributed to the development of data-driven solutions that improved operational efficiency and customer satisfaction.</li>
+            </ul>
+        </div>
+        <div id="certificates" class="section">
+            <h2>Certificates</h2>
+            <ul>
+                <li>Java Programming (Great Learning)</li>
+                <li>IPL Auction bidding using Data science (Great Learning)</li>
+                <li>AWS Academy Cloud Foundations Badge</li>
+                <li>Java basic (HackerRank)</li>
+                <li>MySQL skill badge (LinkedIn)</li>
+                <li>Python basic (HackerRank)</li>
+            </ul>
+        </div>
+        <div id="awards" class="section">
+            <h2>Awards and Achievements</h2>
+            <ul>
+                <li>Best Project Award: Recognized for the best project in the CSE group during the spring semester of the 2021-2022 academic year for the Driver Drowsiness Detection system.</li>
+                <li>Hackathon Achievement: Secured 5th place among 100+ teams in a hackathon conducted by St. Peter's Institute, designing an AI-based proctoring system to monitor online exams and prevent malpractice. Awarded a technical internship.</li>
+                <li>Merit-Based Scholarship: Received a merit-based scholarship for bachelor’s in computer science, awarded for being in the top 5% of students in the class in recognition of academic excellence.</li>
+            </ul>
+        </div>
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Phone: +1 571-595-8499</p>
+            <p>Email: praneeth786333@gmail.com</p>
+            <p><a href="https://www.linkedin.com/in/boinpally-praneeth-8028881a3" target="_blank">LinkedIn</a></p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Praneeth Boinpally. All rights reserved.</p>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Show the selected section
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.classList.add('active');
+            }
+        }
+    </script>
+</body>
+</html>
