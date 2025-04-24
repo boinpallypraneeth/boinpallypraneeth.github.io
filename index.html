@@ -14,8 +14,8 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #fff; /* Set text color to white */
-            background-color: transparent; /* Set body background to transparent */
+            color: #fff;
+            background-color: transparent;
         }
     
         .spline-container {
@@ -28,14 +28,14 @@
         }
     
         .header {
-            background: rgba(0, 0, 0, 0.6); /* Background for header with transparency */
+            background: rgba(0, 0, 0, 0.6);
             color: #fff;
             padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative; /* Ensure it stacks above spline */
-            z-index: 1; /* Ensure it's above spline */
+            position: relative;
+            z-index: 1;
         }
     
         .header h1 {
@@ -50,16 +50,16 @@
         }
     
         .nav button {
-            background: transparent; /* Transparent background */
+            background: transparent;
             color: #fff;
-            border: none; /* No border */
-            padding: 8px 15px; /* Adjusted padding */
+            border: none;
+            padding: 8px 15px;
             cursor: pointer;
             border-radius: 5px;
             transition: all 0.3s ease;
             font-weight: 600;
-            font-size: 1.1em; /* Adjusted font size */
-            text-transform: uppercase; /* Uppercase text */
+            font-size: 1.1em;
+            text-transform: uppercase;
             position: relative;
             overflow: hidden;
             z-index: 1;
@@ -72,7 +72,7 @@
             left: 50%;
             width: 300%;
             height: 300%;
-            background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+            background-color: rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
             z-index: -1;
             transform: translate(-50%, -50%) rotate(45deg);
@@ -87,12 +87,12 @@
             padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            position: relative; /* Ensure it stacks above spline */
-            z-index: 1; /* Ensure it's above spline */
+            position: relative;
+            z-index: 1;
         }
     
         .section {
-            display: none; /* Hide all sections by default */
+            display: none;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -105,44 +105,82 @@
         }
     
         .section.active {
-            display: block; /* Show active section */
+            display: block;
         }
     
         .welcome {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 80vh;
-            text-align: center;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            position: relative; /* Ensure it stacks above spline */
-            z-index: 1; /* Ensure it's above spline */
-        }
-    
-        .welcome h2 {
-            font-size: 2.5em;
-            color: #fff; /* Text color white */
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
 
-        .footer {
-            background: rgba(0, 0, 0, 0.6); /* Background with transparency */
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            z-index: 1; /* Ensure it's above spline */
-        }
+.intro-text {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+.highlight {
+    color: #4fc3f7;
+    font-weight: 600;
+}
+
+.feature-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.feature {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    margin: 0;
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #f5f5f5;
+}
+
+.chatbot-link {
+    color: #4fc3f7;
+    text-decoration: none;
+    border-bottom: 1px dashed #4fc3f7;
+    transition: all 0.2s ease;
+}
+
+.chatbot-link:hover {
+    color: #81d4fa;
+    border-bottom-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .feature-box {
+        grid-template-columns: 1fr;
+    }
     
-        .footer p {
-            margin: 0;
-        }
+    .intro-text {
+        font-size: 1.1em;
+    }
+}
     
         .project-item {
             margin: 20px 0;
@@ -182,37 +220,85 @@
             margin: 10px 0;
         }
     
-          .resume-container {
-    max-width: 100%;
-    overflow: auto;
-    height: 600px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    background-color: #fff; /* Ensure background is white */
+        .resume-container {
+            max-width: 100%;
+            overflow: auto;
+            height: 600px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            background-color: #fff;
         }
 
-.resume-download {
-    text-align: center;
-    margin-top: 10px;
-}
+        .resume-download {
+            text-align: center;
+            margin-top: 10px;
+        }
 
-.resume-download .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
+        .resume-download .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
 
-.resume-download .btn:hover {
-    background-color: #0056b3;
-}
+        .resume-download .btn:hover {
+            background-color: #0056b3;
+        }
 
+        /* Certifications Styles */
+        .certifications-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
 
+        .certification-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .certification-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .certification-item h3 {
+            margin-top: 0;
+            color: #4fc3f7;
+        }
+
+        .certification-item p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #b3e5fc;
+        }
+
+        /* Contact Styles */
+        .contact-content {
+            padding: 20px;
+        }
+
+        .contact-content p {
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        .contact-content a {
+            color: #4fc3f7;
+            text-decoration: none;
+        }
+
+        .contact-content a:hover {
+            text-decoration: underline;
+        }
     
         @keyframes fadeIn {
             from {
@@ -224,7 +310,7 @@
                 transform: translateY(0);
             }
         }
-         /* Mobile responsiveness */
+
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -262,6 +348,10 @@
                 text-align: left;
                 padding: 10px 20px;
             }
+
+            .certifications-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -278,22 +368,45 @@
             <button onclick="showSection('skills')">Skills</button>
             <button onclick="showSection('education')">Education</button>
             <button onclick="showSection('certificates')">Certificates</button>
-            <button onclick="showSection('awards')">Awards</button>
             <button onclick="showSection('contact')">Contact</button>
             <button onclick="showSection('experience')">Experience</button>
             <button onclick="showSection('resume')">Resume</button>
             <button onclick="showSection('application')">Application</button>
+            <button onclick="showChatbot()">My AI Chatbot</button>
         </div>
     </div>
+
     <div class="container">
+        <!-- Welcome Section -->
         <div id="welcome" class="section active">
             <div class="welcome">
-                <h2>Discover the Power of Data with Praneeth Boinpally</h2>
-                <p>Hello! I'm Praneeth Boinpally, a dedicated professional transforming raw data into actionable insights and innovative solutions. Dive into my projects, explore my expertise in data analysis, data engineering, and data science, and see how I turn complex data challenges into opportunities for growth and success.</p>
-            </div>
+                <h2>Welcome to My Portfolio</h2>
+            
+                  <p class="intro-text">I'm <span class="highlight">Praneeth Boinpally</span>, a Data Engineer and AI enthusiast who bridges the gap between raw data and business transformation. With expertise across AWS, Azure, and GCP cloud platforms, I architect data solutions that turn complex challenges into measurable success.</p>
+    
+                  <p>In this portfolio, you'll discover:
+                
+                <div class="feature-box">
+                    <div class="feature">
+                        <div class="feature-icon">📊</div>
+                        <p>Enterprise-grade data pipelines I've engineered for Fortune 500 companies</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🤖</div>
+                        <p>Creator of <a href="#" onclick="showChatbot()" class="chatbot-link">Zenova AI</a> - an intelligent chatbot solution</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🧠</div>
+                        <p>Machine learning systems that solve real business challenges</p>
+                    </div>
+                    
+                </div>
+            </div> 
         </div>
 
+        <!-- Projects Section -->
         <div id="projects" class="section">
+            <!-- Your projects content here -->
             <div class="project-item" onclick="toggleProjectDetails('project1')">
                 <h3>Driver Drowsiness Detection Using Machine Learning</h3>
                 <p>Oct 2021 - Dec 2021</p>
@@ -308,7 +421,7 @@
                     <li>Improved detection accuracy by 20% through iterative model tuning and data analysis.</li>
                 </ul>
             </div>
-
+            
             <div class="project-item" onclick="toggleProjectDetails('project2')">
                 <h3>Network Intrusion Detection Using Machine Learning Techniques</h3>
                 <p>Feb 2022 - May 2022</p>
@@ -323,6 +436,7 @@
                     <li>Reported findings to stakeholders, providing actionable insights into network security.</li>
                 </ul>
             </div>
+
             <div class="project-item" onclick="toggleProjectDetails('project3')">
                 <h3>Intelligent Proctor</h3>
                 <p>Jun 2022 - Aug 2022</p>
@@ -383,9 +497,8 @@
                 </ul>
             </div>
         </div>
-            
-        </div>
 
+        <!-- Resume Section -->
         <div id="resume" class="section">
             <h2>Resume</h2>
             <div class="resume-container">
@@ -395,39 +508,196 @@
                 <a href="BOINPALLYPRANEETH-RESUME.pdf" download="BOINPALLYPRANEETH-RESUME" class="btn">Download Resume (PDF)</a>
             </div>
         </div>
-        
 
-        <!-- Other sections like Skills, Education, Certificates, Awards, Contact, Experience -->
+        <!-- Application Section -->
+        <div id="application" class="section">
+            <h2>Data Cleaning and Visualization Application</h2>
+            <div class="application-content">
+                <p><strong>Description:</strong> This application allows users to upload datasets, clean the data by removing duplicates or handling missing values, and visualize the cleaned data using various chart types. The backend is powered by Flask, and the frontend is developed using React.</p>
+                <ul>
+                    <li>Upload datasets in CSV format.</li>
+                    <li>Choose data cleaning options: remove duplicates, handle missing values.</li>
+                    <li>Visualize the cleaned data with bar charts, line charts, and pie charts.</li>
+                    <li>Download the cleaned data as a CSV file.</li>
+                </ul>
+                <p><a href="https://github.com/boinpallypraneeth/data-cleaning-tool" target="_blank">View on GitHub</a></p>
+                <div class="application-images">
+                    <img src="image1.png" alt="Application Screenshot 1" style="width: 100%; max-width: 500px;">
+                    <img src="image2.png" alt="Application Screenshot 2" style="width: 100%; max-width: 500px;">
+                    <img src="image3.png" alt="Application Screenshot 3" style="width: 100%; max-width: 500px;">
+                </div>
+            </div>
+        </div>
 
+        <!-- Skills Section -->
+        <div id="skills" class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><strong>Languages:</strong> Java, Python, PySpark, SQL, Bash, R, HTML, CSS, JavaScript</li>
+                <li><strong>Libraries & Frameworks:</strong> Pandas, NumPy, scikit-learn, XGBoost, TensorFlow, Matplotlib, Seaborn, PyTorch, MLFlow, dbt, Jupyter Notebook</li>
+              
+                <li><strong>Tools & Platforms:</strong> Tableau, Power BI, Looker, Dremio, Microsoft Office Studio, SQL Server Management Studio (SSMS), Microsoft Visio, Visual Studio, Git (GitHub, GitLab, Bitbucket), JIRA, ServiceNow</li>
+              
+                <li><strong>Data Engineering & Processing:</strong> Apache Spark (Scala, JVM, PySpark), Apache Hive, Apache Flink, Hadoop, Delta Lake, Apache Iceberg, Apache Impala, Trino, Presto, ClickHouse, Kafka, Apache NiFi, Airflow, Dagster, Prefect</li>
+              
+                <li><strong>Cloud Platforms:</strong> AWS (S3, Redshift, RDS, Glue, Lambda, Data Pipeline, EMR, IAM, CloudFormation, EKS, Kinesis), Microsoft Azure (Blob Storage, SQL Database, Data Factory, Synapse Analytics, Machine Learning, Monitor, Logic Apps, DevOps), Google Cloud Platform (BigQuery, Cloud Storage, Pub/Sub, Composer, Vertex AI, GKE)</li>
+              
+                <li><strong>Databases:</strong> MySQL, PostgreSQL, SQL Server, Oracle, Cassandra, Redis, MongoDB, Snowflake, SAP HANA, Azure Cosmos DB, NoSQL, TimescaleDB, Vertica</li>
+              
+                <li><strong>ETL/ELT Tools:</strong> Informatica, SSIS, Talend, Stitch Data, Matillion, Airbyte, Meltano, Fivetran, AWS Data Pipeline</li>
+              
+                <li><strong>DevOps & Infrastructure:</strong> Docker, Kubernetes, Terraform, CloudFormation, Jenkins, Azure DevOps, CI/CD, GitOps</li>
+              
+                <li><strong>Machine Learning & AI:</strong> Predictive Modeling, ML Algorithms, Feature Engineering, Model Deployment, A/B Testing, OpenAI APIs, AI Chatbots</li>
+              
+                <li><strong>Data Analytics & Techniques:</strong> Data Analysis, Data Cleaning, Data Visualization, Statistical Analysis, Time Series Analysis, Regression Analysis, Hypothesis Testing, A/B Testing, Data Mining, Data Profiling, Data Quality Frameworks</li>
+              
+                <li><strong>Data Governance & Catalogs:</strong> Apache Atlas, Unity Catalog (Databricks), Alation, Collibra, Microsoft Purview</li>
+              
+                <li><strong>Data Modeling & Warehousing:</strong> Star/Snowflake Schema, ER Modeling, dbt, Dimensional Modeling, MDM, Data Warehousing Concepts</li>
+              
+                <li><strong>API & Automation:</strong> REST APIs, GraphQL, gRPC, Azure Logic Apps, Zapier, Apache NiFi</li>
+              
+                <li><strong>Monitoring & Observability:</strong> Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana), Azure Monitor, CloudWatch, Stackdriver</li>
+              
+                <li><strong>Security & Compliance:</strong> IAM, RBAC, OAuth2, SAML, Data Encryption (KMS), Row-Level Security, Column-Level Security</li>
+              
+                <li><strong>Other Skills:</strong> Project Management, Problem-Solving, Critical Thinking, Collaboration, Communication Skills, Agile Methodologies, Attention to Detail</li>
+            </ul>
+        </div>
+
+        <!-- Education Section -->
+        <div id="education" class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>George Mason University</strong> | Virginia, USA
+                    <p>M.S in Computer Science | Jan 2023 – May 2024</p>
+                    <p>GPA: 3.67/4</p>
+                </li>
+                <li>
+                    <strong>Sphoorthy Engineering College</strong> | Hyderabad, India
+                    <p>Bachelor of Technology, Computer Science | Aug 2018 - July 2022</p>
+                    <p>GPA: 7.47/10</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Experience Section -->
+        <div id="experience" class="section">
+            <h2>Experience</h2>
+            <div>
+                <p><strong>Data Engineer – Azure</strong></p>
+                <p>Christus Health, USA | December 2023 – Present</p>
+                <ul>
+                    <li>Built and maintained robust ETL pipelines using Azure Data Factory, Databricks, and Azure SQL Database for healthcare analytics.</li>
+                    <li>Streamlined data ingestion and transformation for clinical data, improving reporting efficiency by 35%.</li>
+                    <li>Ensured data security and compliance with HIPAA standards across cloud pipelines and storage.</li>
+                    <li>Developed Power BI dashboards to track key health metrics and operational KPIs.</li>
+                    <li>Collaborated with data governance teams to establish data quality and cataloging using Azure Purview.</li>
+                </ul>
+            </div>
+
+            <div>
+                <p><strong>AWS Data Engineer</strong></p>
+                <p>Toyota North America, USA | March 2023 – November 2023</p>
+                <ul>
+                   <li>Engineered real-time and batch data pipelines using AWS Glue, Lambda, Redshift, and S3 for connected vehicle data analysis.</li>
+                   <li>Enabled automated data quality checks and metadata lineage using custom Python-based validation frameworks.</li>
+                   <li>Reduced infrastructure cost by 20% through optimization of storage and compute resources in AWS.</li>
+                   <li>Integrated Kafka and Kinesis for streaming telemetry data, supporting data-driven diagnostics and alerts.</li>
+                   <li>Used Looker for BI reporting and enhanced visibility into vehicle usage and performance trends.</li>
+                </ul>
+              </div>
+
+              <div>
+                <p><strong>GCP Data Engineer</strong></p>
+                <p>DBS Bank, India | June 2021 – November 2022</p>
+                <ul>
+                   <li>Built scalable ETL pipelines on GCP using Dataflow, BigQuery, and Cloud Composer for customer transaction insights.</li>
+                   <li>Managed financial data marts and provided near real-time data delivery for fraud detection and customer analytics.</li>
+                   <li>Created reusable Terraform modules for provisioning GCP infrastructure, reducing deployment time by 40%.</li>
+                   <li>Developed CI/CD pipelines with Cloud Build and GitLab for seamless code integration and testing.</li>
+                   <li>Improved query performance in BigQuery by optimizing partitioning and clustering, leading to 50% faster analytics.</li>
+                </ul>
+              </div>
+
+              <div>
+                <p><strong>Data Engineer</strong></p>
+                <p>Cholamandalam MS General Insurance, India | March 2019 – May 2021</p>
+                <ul>
+                   <li>Developed end-to-end data pipelines for insurance claim processing and fraud analytics using Informatica and Oracle.</li>
+                   <li>Designed star schema data models for policyholder and claims data to improve reporting structure.</li>
+                   <li>Built interactive Tableau dashboards enabling business stakeholders to analyze claim trends and risk profiles.</li>
+                   <li>Performed statistical analysis and implemented predictive models to reduce claim fraud by 15%.</li>
+                   <li>Collaborated with IT and underwriting teams to migrate legacy reports to a modern BI stack.</li>
+                </ul>
+              </div>
+            <!-- Other experiences... -->
+        </div>
+
+        <!-- Certificates Section -->
+    <div id="certificates" class="section">
+            <h2>Certifications</h2>
+            <div class="certifications-container">
+                <div class="certification-item">
+                    <h3>AWS Certified Data Engineer – Associate</h3>
+                    <p>Amazon Web Services</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Microsoft Certified: Azure Data Engineer Associate</h3>
+                    <p>Microsoft</p>
+                    <p>Issued: 2024</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Google Cloud Certified: Professional Data Engineer</h3>
+                    <p>Google Cloud</p>
+                    
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Google Analytics Certification</h3>
+                    <p>Google</p>
+                    <p>Issued: 2024</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>AWS Academy Cloud Foundations</h3>
+                    <p>Amazon Web Services</p>
+                    <p>Issued: 2019</p>
+                </div>
+                
+                <div class="certification-item">
+                    <h3>Databricks Lakehouse Fundamentals</h3>
+                    <p>Databricks</p>
+                    <p>Issued: 2025</p>
+                </div>
+
+                <div class="certification-item">
+                    <h3>Databricks - Generative AI </h3>
+                    <p>Databricks</p>
+                    <p>Issued: 2025</p>
+                </div>
+
+            </div>
     </div>
 
-    <div id="application" class="section">
-        <h2>Data Cleaning and Visualization Application</h2>
-        <div class="application-content">
-            <p><strong>Description:</strong> This application allows users to upload datasets, clean the data by removing duplicates or handling missing values, and visualize the cleaned data using various chart types. The backend is powered by Flask, and the frontend is developed using React.</p>
-            <ul>
-                <li>Upload datasets in CSV format.</li>
-                <li>Choose data cleaning options: remove duplicates, handle missing values.</li>
-                <li>Visualize the cleaned data with bar charts, line charts, and pie charts.</li>
-                <li>Download the cleaned data as a CSV file.</li>
-            </ul>
-        </ul>
-        <p><a href="https://github.com/boinpallypraneeth/data-cleaning-tool" target="_blank">View on GitHub</a></p>
-            <!-- Add screenshots or images -->
-            <div class="application-images">
-                <img src="image1.png" alt="Application Screenshot 1" style="width: 100%; max-width: 500px;">
-                <img src="image2.png" alt="Application Screenshot 2" style="width: 100%; max-width: 500px;">
-                <img src="image3.png" alt="Application Screenshot 3" style="width: 100%; max-width: 500px;">
+        <!-- Contact Section -->
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <div class="contact-content">
+                <p>Phone: +1 682-235-0264</p>
+                <p>Email: PraneethBoinpally3@gmail.com</p>
+                <p><a href="https://www.linkedin.com/in/depraneeth/" target="_blank">LinkedIn</a></p>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2024 Praneeth Boinpally. All rights reserved.</p>
-    </div>
+    
 
-    <!-- JavaScript for section toggling -->
+    <!-- JavaScript -->
     <script>
         function showSection(sectionId) {
             // Hide all sections
@@ -443,89 +713,10 @@
             var projectDetails = document.getElementById(projectId);
             projectDetails.style.display = (projectDetails.style.display === 'block') ? 'none' : 'block';
         }
-    </script>
-        <div id="skills" class="section">
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>Languages: Java, Python, Pyspark, SQL, CSS, JavaScript, HTML, R</li>
-                <li>Tools and Libraries: Pandas, NumPy, scikit-learn, XGBoost, TensorFlow, Tableau, Power BI, Microsoft Office Studio, Matplotlib, Seaborn, Jupyter Notebook, SQL Server Management Studio (SSMS), Microsoft Visio</li>
-                <li>Techniques: Data Analysis, Data Cleaning, Data Visualization, Statistical Analysis, Machine Learning, Predictive Modeling, Data Mining, ETL Processes, Database Management Systems (DBMS), Data Warehousing, A/B Testing, Hypothesis Testing, Regression Analysis, Time Series Analysis</li>
-                <li>Other Skills: Project Management, Problem-Solving, Critical Thinking, Communication Skills, Collaboration, Attention to Detail</li>
-                <li>Cloud: AWS (AWS S3, AWS Redshift, AWS RDS, AWS Glue, AWS Lambda, Kubernetes), Microsoft Azure (Azure Blob Storage, Azure SQL Database, Azure Data Factory, Azure Synapse Analytics, Azure Machine Learning)</li>
-            </ul>
-        </div>
-        <div id="education" class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>George Mason University</strong> | Virginia, USA
-                    <p>M.S in Computer Science | Jan 2023 – May 2024</p>
-                    <p>GPA: 3.67/4</p>
-                </li>
-                <li>
-                    <strong>Sphoorthy Engineering College</strong> | Hyderabad, India
-                    <p>Bachelor of Technology, Computer Science | Aug 2018 - July 2022</p>
-                    <p>GPA: 7.48/10</p>
-                </li>
-            </ul>
-        </div>
-        <div id="experience" class="section">
-            <h2>Experience</h2>
-            <p>Data Analyst</p>
-            <p>Trycryfly Service Limited, Hyderabad | October 2020 - October 2022 </p>
-            <ul>
-                <li>Design and optimize cloud-based data pipelines on Databricks and SQL for a 30% efficiency improvement in data processing.</li>
-                <li>Designed scalable data architectures on Azure and GCP to support data transformation and integrations.</li>
-                <li>Performed root cause analysis, optimized data workflows, improved performance and quality of data by 25%.</li>
-                <li>Automated metadata management and data transformation processes developed, which increased accuracy and coherence within the system..</li>
-                <li>Collaborated with cross-functional teams on the integration of huge datasets and their processing, thereby unlocking key consumer insights to inform strategic decisions.</li>
-            </ul>
-        </div>
-        <div id="certificates" class="section">
-            <h2>Certificates</h2>
-            <ul>
-                <li>Java Programming (Great Learning)</li>
-                <li>IPL Auction bidding using Data science (Great Learning)</li>
-                <li>AWS Academy Cloud Foundations Badge</li>
-                <li>Java basic (HackerRank)</li>
-                <li>MySQL skill badge (LinkedIn)</li>
-                <li>Python basic (HackerRank)</li>
-            </ul>
-        </div>
-        <div id="awards" class="section">
-            <h2>Awards and Achievements</h2>
-            <ul>
-                <li>Best Project Award: Recognized for the best project in the CSE group during the spring semester of the 2021-2022 academic year for the Driver Drowsiness Detection system.</li>
-                <li>Hackathon Achievement: Secured 5th place among 100+ teams in a hackathon conducted by St. Peter's Institute, designing an AI-based proctoring system to monitor online exams and prevent malpractice. Awarded a technical internship.</li>
-                
-            </ul>
-        </div>
-        <div id="contact" class="section">
-            <h2>Contact</h2>
-            <p>Phone: +1 571-595-8499</p>
-            <p>Email: Boinpally.Praneeth@gmail.com</p>
-            <p><a href="https://www.linkedin.com/in/boinpally-praneeth-8028881a3" target="_blank">LinkedIn</a></p>
-        </div>
-    </div>
-    <div class="footer">
-        <p>&copy; 2024 Praneeth Boinpally. All rights reserved.</p>
-    </div>
 
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Show the selected section
-            const section = document.getElementById(sectionId);
-            if (section) {
-                section.classList.add('active');
-            }
+        function showChatbot() {
+            window.open('https://boinpallypraneeth.github.io/Zenova-AI/', '_blank');
         }
     </script>
 </body>
 </html>
-
-
